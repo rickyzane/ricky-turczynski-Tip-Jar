@@ -20,7 +20,13 @@
     background-attachment:fixed;
     background-repeat:no-repeat;
     color:#555;
+  } @media (max-width:600px) {
+  body {
+    background-size:auto 100%;
+    background-position:center top;
+    background-attachment:scroll;
   }
+}
   .wrap { width:min(680px,100%); padding:46px 20px 42px; text-align:center; }
   h1 { margin:0 0 10px;
   font-size:clamp(32px,8vw,56px);
