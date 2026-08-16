@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eef1f7">
+<title>Ricky Turczynski — Tip Jar</title>
+<style>
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; display:flex; justify-content:center;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
+    background:linear-gradient(180deg,#eef1f7 0%,#f7f8fb 100%);
+    color:#555;
+  }
+  .wrap { width:min(680px,100%); padding:46px 20px 42px; text-align:center; }
+  h1 { margin:0 0 10px; font-size:clamp(32px,8vw,54px); color:#626262; letter-spacing:-1.5px; }
+  .tag { margin:0 0 30px; color:#777; font-size:18px; }
+  .card {
+    background:#fff; border-radius:30px; padding:28px 22px;
+    box-shadow:0 14px 40px rgba(0,0,0,.08);
+  }
+  .title { font-size:31px; font-weight:800; color:#606060; margin:0 0 22px; }
+  .buttons { display:grid; gap:14px; }
+  a.button {
+    display:flex; align-items:center; justify-content:center; gap:12px;
+    min-height:64px; border-radius:18px; text-decoration:none;
+    color:#fff; font-size:20px; font-weight:750;
+    transition:transform .12s ease,filter .12s ease;
+  }
+  a.button:active { transform:scale(.98); }
+  .cash { background:#16a34a; }
+  .venmo { background:#3d95ce; }
+  .paypal { background:#003087; }
+  .apple { background:#111; }
+  .apple small { font-size:13px; font-weight:500; opacity:.8; }
+  .note { margin:20px 4px 0; font-size:14px; line-height:1.5; color:#777; }
+  .qr {
+    margin-top:22px; padding-top:22px; border-top:1px solid #eee;
+  }
+  .qr img { width:min(300px,80%); border-radius:18px; }
+  .qr p { margin:10px 0 0; font-size:13px; color:#777; }
+  .footer { margin:34px 0 0; font-size:23px; font-weight:800; color:#686868; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Ricky Turczynski</h1>
+  <p class="tag">Choose your preferred way to send a tip.</p>
+
+  <section class="card">
+    <h2 class="title">💰 Tip Jar</h2>
+
+    <div class="buttons">
+      <a class="button cash" href="https://cash.app/$Rickyzane">💵 Cash App</a>
+      <a class="button venmo" href="https://venmo.com/u/Ricky-Turczynski">💙 Venmo</a>
+      <a class="button paypal" href="https://www.paypal.com/qrcodes/managed/6f5bd2ab-87bd-4ad0-a1af-64b01091ca83?utm_source=consapp_download">🅿️ PayPal</a>
+      <a class="button apple" href="sms:8507976284?body=Hi%20Ricky%2C%20I%27d%20like%20to%20send%20you%20Apple%20Cash."> Apple Cash</a>
+    </div>
+
+    <p class="note">
+      Apple Cash uses your phone number because it does not provide a public payment profile link.
+    </p>
+
+    <div class="qr" id="paypal">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYgAAAGIAQAAAABzOEqLAAAC8UlEQVR4nO2bzXasMAyDpXvm/V9Zd2HLhNl1QZoaz6YM8J3iZJzIP1D44effT4EhhhhiiCEaEh8AYBwLhEABVB5RYFzIO061owvxARDjHGPOOIYIChAVJ647zrSjCxHzEU4AiiIIhGvE3ITX5B2bnuq9xOf+VQyfAGJCCFB3SXymHV2I+3yEJ6Q3KBes8ox9T/V6QuUExLJ6QVT6R91xtB1/ngj/SPkE8esyxVi+rgtn2tGF+AC35Sj1lAiqRK7WO860owsBSR5u5chLdQjksW+VzrSjCxHzYR+Qxz8UVpxO31DefKYdXQjmaBMRklvo+htE+eK+p3o5QUcdFEDGFIBI14np4MTnGwhmIsRRBlevWOPDCtDPtKMLYTGrCgPpaVEmTfzJNetMO7oQy2/fy5JuV2K+xFK8Z9rRjJAqQQISIJh/AVDKU5uf6oVE/u6X+kYmrGL5EpGKS771TDu6EIveXXb12EhS9MrnZ//YSZCK6hO5jH74R34fffU4YTV1KS1gkVwOSlCl3EPtaEi49uTpIESQdPKKv/JULyNKx14V2vQWrptJfsY/niZYkgolr7x3VHeJxda2p3ovccV5yLjPapfucHA/w+wfu4jwjqjUUrpWLhdvF8F1sh1diGgkiTkQmcncrJy7XOiuuIPtaECsUteJ3C+Vm9vH1D/2+UdVQMiooEfqKpeqWs7GP3YRS6eVyNhGst1k2T92P9Vbicjkhpxy/JcFwmo1qTz8wXa0IeQAw86gK39FCVy2kJPtaEN4tKWsdmQLdeVJrq7Ro+3oQqTGFQlnsJxepFtIOfv588R3fO5uhkyVXNq3Srln2tGFuL0fpcst/CJOprZ4NY2eaUcvQtGlSLpHlBSds3KQPvHHBuLK72b84YpU5XxZkcfkr7YTIgRFFKLstc7jyV/9BuHtwy8cZKQeCcfxj8eJfF8ta7JLKdDydokUJx58nlhffiqZC7jNvQJB95mcakcX4hZ/PPQ/hhhiiCGG6Ef8B+LGoduLjtxRAAAAAElFTkSuQmCC" alt="PayPal QR code">
+      <p>PayPal QR code</p>
+    </div>
+  </section>
+
+  <div class="footer">Scan. Pay. Go.</div>
+</main>
+</body>
+</html>
